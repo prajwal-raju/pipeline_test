@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	triggers {
+  pollSCM '* * * * *'
+		}	
 	tools {
   ant 'Ant installation' 
 	}
@@ -22,7 +25,7 @@ pipeline {
 		stage ('deploy') {
 			steps {
 				echo This is a Deploy stage
-				sh sleep 10
+				sh "sleep 10"
 				}
 			}
 			}
