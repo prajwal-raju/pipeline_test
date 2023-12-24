@@ -7,7 +7,7 @@ pipeline {
 		stage ('GIT checkout') {
 			steps {
 				echo This is a git checkout stage
-				git branch: 'main', url: 'https://github.com/prajwal-raju/pipeline_test'  --> Declarative Directive Generator
+				git branch: 'main', url: 'https://github.com/prajwal-raju/pipeline_test'
 			      }
 				  }
 		stage ('build') {
