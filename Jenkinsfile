@@ -10,7 +10,8 @@ pipeline {
 			steps {
 				echo "This is a build stage"
 				cd /var/lib/jenkins/workspace/pipeline_test
-				mvn clean install
+				ant clean all
+				ant
 				}
 				}
 		stage (deploy) {
